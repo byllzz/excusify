@@ -1,16 +1,76 @@
-# React + Vite
+# Excusify
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> A developer excuse generator — because "I don't know" isn't always professional enough.
 
-Currently, two official plugins are available:
+![Status](https://img.shields.io/badge/status-in%20development-yellow)
+![Built With](https://img.shields.io/badge/built%20with-React%20%2B%20Vite-61DAFB)
+![License](https://img.shields.io/badge/license-MIT-green)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## What is Excusify?
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Excusify is a dev-focused tool that generates context-aware excuses for common engineering situations — missed deadlines, production outages, unreviewed PRs, failed deploys, and more.
 
-## Expanding the ESLint configuration
+Pick your situation, pick your tone, get an excuse. Copy it. Send it. Survive the standup.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## Features
+
+- **6 situations** — bug still exists, missed deadline, prod went down, PR not reviewed, deploy failed, missed standup
+- **4 tones** — professional, chaotic, desperate, corporate bs
+- **One-click copy** — paste directly into Slack, email, or Teams
+- **Believability rating** — vote on how convincing your excuse is
+
+---
+
+## Tech Stack
+
+- [React](https://react.dev/) + [Vite](https://vitejs.dev/)
+- Vanilla CSS
+- No external UI libraries
+
+---
+
+## Getting Started
+
+```bash
+# clone the repo
+git clone https://github.com/yourusername/excusify.git
+cd excusify
+
+# install dependencies
+npm install
+
+# run locally
+npm run dev
+```
+
+---
+
+## Project Status
+
+> **🚧 Excusify is currently in active development.**
+
+This project is a work in progress. Things will break, change, and occasionally catch fire (see: prod went down). Contributions, feedback, and feature ideas are welcome.
+
+Planned for upcoming versions:
+
+- AI-powered dynamic excuse generation via Claude API
+- Shareable excuse cards (image export)
+- Excuse history with localStorage
+- Dark / light mode toggle
+- More situations and tones
+
+---
+
+## Contributing
+
+Got a better excuse? Open a PR. Found a bug? Open an issue — and don't worry, we have an excuse generator ready for you to explain why it took so long to fix.
+
+---
+
+## License
+
+MIT — use it, fork it, blame it on a race condition.
