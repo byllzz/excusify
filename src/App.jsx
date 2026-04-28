@@ -7,7 +7,7 @@ import SettingsPanel from './components/SettingsPanel'
 import EotdBanner from './components/EotdBanner'
 import CustomSituation from './components/CustomSituation'
 
-// ── constants ────────────────────────────────────────────────────────────────
+// ── constants
 
 const LS_KEY        = 'excusify_state'
 const LS_SETTINGS   = 'excusify_settings'
@@ -25,7 +25,7 @@ const DEFAULT_SETTINGS = {
   theme:            'dark',
 }
 
-// ── helpers ──────────────────────────────────────────────────────────────────
+// ── helpers
 
 function load(key, fallback) {
   try {
@@ -74,7 +74,7 @@ function readUrlParams() {
   } catch { return null }
 }
 
-// ── App ──────────────────────────────────────────────────────────────────────
+// ── App 
 
 export default function App() {
   const [settings, setSettings] = useState(() => load(LS_SETTINGS, DEFAULT_SETTINGS))
