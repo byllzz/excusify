@@ -4,7 +4,7 @@ import SituationPicker from './components/SituationPicker'
 import TonePicker from './components/TonePicker'
 import ExcuseCard from './components/ExcuseCard'
 import SettingsPanel from './components/SettingsPanel'
-import EotdBanner from './components/Eotdbanner'
+import EotdBanner from './components/EotdBanner';
 
 // ── constants
 
