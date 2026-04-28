@@ -1,7 +1,7 @@
 import { useMemo } from 'react'
 import { excuses } from '../data/excuses'
 
-// ── seeded random (mulberry32) ────────────────────────────────────────────────
+// ── seeded random (mulberry32)
 function seededRandom(seed) {
   let t = seed + 0x6D2B79F5
   t = Math.imul(t ^ (t >>> 15), t | 1)
@@ -31,7 +31,7 @@ function getEotd() {
   return { excuse: pool[excuseIndex], situation: sit, tone }
 }
 
-export default function EotdBanner({ isDark, onUse }) {
+export default function EotdExcuse({ isDark, onUse }) {
   const eotd = useMemo(() => getEotd(), [])
 
   const today = new Date().toLocaleDateString('en-US', { month: 'short', day: 'numeric' })

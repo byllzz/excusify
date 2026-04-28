@@ -4,7 +4,7 @@ import SituationPicker from './components/SituationPicker'
 import TonePicker from './components/TonePicker'
 import ExcuseCard from './components/ExcuseCard'
 import SettingsPanel from './components/SettingsPanel'
-import EotdBanner from './components/EotdBanner';
+import EotdExcuse from './components/EotdExcuse'
 
 // ── constants
 
@@ -226,16 +226,6 @@ export default function App() {
     window.history.replaceState({}, '', buildShareUrl(situation, tone, e))
   }
 
-  // ── from custom situation / AI ────────────────────────────────────────────────
-
-  function handleCustomExcuse({ excuse: e, situation, tone }) {
-    setExcuse(e)
-    setCustomTone({ situation, tone })
-    setRated(null); setCopied(false)
-    setCount(c => c + 1); setTotalCount(c => c + 1)
-    setHistory(prev => [{ excuse: e, situation, tone }, ...prev.filter(h => h.excuse !== e)].slice(0, MAX_HISTORY))
-    window.history.replaceState({}, '', buildShareUrl(situation, tone, e))
-  }
 
   // ── theme helpers ─────────────────────────────────────────────────────────────
 
@@ -295,7 +285,7 @@ export default function App() {
       </div>
 
       {/* ── excuse of the day ── */}
-      <EotdBanner isDark={isDark} onUse={handleUseEotd} />
+      <EotdExcuse isDark={isDark} onUse={handleUseEotd} />
 
       {/* ── main card ── */}
       <div className={`w-full max-w-xl border ${cardBdr} rounded-2xl ${cardBg} p-6 space-y-6 shadow-2xl shadow-black/20 transition-colors duration-300`}>

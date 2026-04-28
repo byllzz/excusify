@@ -10,7 +10,6 @@ export default function ExcuseCard({
 }) {
   if (!excuse) return null
 
-  const shareRef = useRef(null)
 
   const cardClass   = isDark ? 'border-zinc-700 bg-zinc-900/60 backdrop-blur' : 'border-zinc-200 bg-zinc-50'
   const divider     = isDark ? 'border-zinc-800' : 'border-zinc-200'
@@ -19,7 +18,9 @@ export default function ExcuseCard({
     ? 'border-zinc-700 text-zinc-500 hover:border-zinc-500 hover:text-zinc-300'
     : 'border-zinc-300 text-zinc-400 hover:border-zinc-400 hover:text-zinc-600'
 
-  // ── share as image ──────────────────────────────────────────────────────────
+  const shareRef = useRef(null);
+
+  // ── share as image 
   async function handleShareImage() {
     try {
       const html2canvas = (await import('html2canvas')).default
