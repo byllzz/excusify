@@ -4,8 +4,7 @@ import SituationPicker from './components/SituationPicker'
 import TonePicker from './components/TonePicker'
 import ExcuseCard from './components/ExcuseCard'
 import SettingsPanel from './components/SettingsPanel'
-import EotdBanner from './components/EotdBanner'
-import CustomSituation from './components/CustomSituation'
+import EotdBanner from './components/Eotdbanner'
 
 // ── constants
 
@@ -27,7 +26,10 @@ const DEFAULT_SETTINGS = {
 
 // ── helpers
 
+
+// load function:
 function load(key, fallback) {
+  if (typeof window === 'undefined') return fallback; // Safety check for SSR
   try {
     const v = localStorage.getItem(key)
     return v ? JSON.parse(v) : fallback
@@ -74,7 +76,7 @@ function readUrlParams() {
   } catch { return null }
 }
 
-// ── App 
+// ── App
 
 export default function App() {
   const [settings, setSettings] = useState(() => load(LS_SETTINGS, DEFAULT_SETTINGS))
@@ -341,10 +343,6 @@ export default function App() {
         )}
       </div>
 
-      {/* ── custom situation ── */}
-      <div className="w-full max-w-xl mt-4">
-        <CustomSituation isDark={isDark} onExcuse={handleCustomExcuse} />
-      </div>
 
       {/* ── footer ── */}
       <p className={`mt-8 font-mono text-xs ${footerCl}`}>
