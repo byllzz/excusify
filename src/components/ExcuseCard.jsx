@@ -1,5 +1,5 @@
 import { useRef } from 'react'
-import ShareCard from './ShareCard'
+import ShareCard from './Sharecard'
 
 export default function ExcuseCard({
   excuse, situation, tone,
@@ -20,7 +20,7 @@ export default function ExcuseCard({
 
   const shareRef = useRef(null);
 
-  // ── share as image 
+  // ── share as image
   async function handleShareImage() {
     try {
       const html2canvas = (await import('html2canvas')).default
