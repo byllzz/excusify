@@ -1,7 +1,8 @@
 import { useMemo } from 'react'
 import { excuses } from '../data/excuses'
+import {BsArrowUpRight } from 'react-icons/bs'
 
-// ── seeded random (mulberry32)
+//  random (mulberry32)
 function seededRandom(seed) {
   let t = seed + 0x6D2B79F5
   t = Math.imul(t ^ (t >>> 15), t | 1)
@@ -11,7 +12,7 @@ function seededRandom(seed) {
 
 function getTodaySeed() {
   const d = new Date()
-  // seed = YYYYMMDD as integer
+  // date = YYYYMMDD as integer
   return d.getFullYear() * 10000 + (d.getMonth() + 1) * 100 + d.getDate()
 }
 
@@ -46,7 +47,9 @@ export default function EotdExcuse({ isDark, onUse }) {
     : 'border-zinc-300 text-zinc-500 hover:border-zinc-400 hover:text-zinc-700'
 
   return (
-    <div className={`w-full max-w-xl border rounded-xl p-4 mb-6 transition-colors duration-300 ${wrap}`}>
+    <div
+      className={`w-full max-w-xl border rounded-xl p-4 mb-6 transition-colors duration-300 ${wrap}`}
+    >
       <div className="flex items-center justify-between mb-2">
         <div className="flex items-center gap-2">
           <span className={`text-xs font-mono font-semibold ${label}`}>✦ excuse of the day</span>
@@ -69,10 +72,10 @@ export default function EotdExcuse({ isDark, onUse }) {
 
       <button
         onClick={() => onUse(eotd)}
-        className={`text-xs font-mono px-3 py-1 rounded-md border transition-all cursor-pointer ${btn}`}
+        className={`text-xs font-mono px-3 py-1 rounded-md border transition-all cursor-pointer ${btn} flex items-center gap-1`}
       >
-        use this excuse ↗
+        use this excuse <BsArrowUpRight />
       </button>
     </div>
-  )
+  );
 }

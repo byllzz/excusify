@@ -1,6 +1,3 @@
-
-
-
 export const tones = [
   { id: 'professional', label: 'professional' },
   { id: 'chaotic',      label: 'chaotic'      },
