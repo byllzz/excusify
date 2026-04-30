@@ -90,7 +90,7 @@ export default function ShareCard({ excuse, situation, tone, cardRef }) {
         width: '600px',
         background: '#0f1724',
         borderRadius: '16px',
-        padding: '32px 36px',
+        padding: '32px 46px',
         fontFamily: 'Inter, ui-monospace, SFMono-Regular, Menlo, Monaco, monospace',
         border: '1px solid rgba(255,255,255,0.03)',
         color: '#e6eef8',

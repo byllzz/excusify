@@ -534,7 +534,7 @@ export default function App() {
           <span className="w-3 h-3 rounded-full bg-red-500/70" />
           <span className="w-3 h-3 rounded-full bg-yellow-500/70" />
           <span className="w-3 h-3 rounded-full bg-emerald-500/70" />
-          <span className={`ml-3 font-mono text-xs ${winBar}`}>excusify — bash</span>
+          <span className={`ml-3 font-mono text-xs ${winBar}`}>excusify - bash</span>
         </div>
 
         <div id="situation-picker" className="focus:outline-none">
@@ -598,9 +598,9 @@ export default function App() {
 
       {/* footer */}
       <p className={`mt-8 font-mono text-xs ${footerCl}`}>
-        excusify · open source · still in development
+        excusify · open source 
         {totalCount > 0 && (
-          <span className="ml-2 opacity-60">· {totalCount.toLocaleString()} excuses generated</span>
+          <span className="ml-2 opacity-100">· {totalCount.toLocaleString()} excuses generated</span>
         )}
       </p>
 
@@ -612,11 +612,10 @@ export default function App() {
         onToggle={handleToggle}
         onClearData={handleClearData}
         onResetSettings={handleResetSettings}
-        // history={history}
         onClearHistory={() => setHistory([])}
-        // favorites={favorites}
+
         onClearFavorites={() => setFavorites([])}
-        // totalCount={totalCount}
+
       />
 
       {/* centered overlay for quick tabs (favorites, history, about, repo) */}

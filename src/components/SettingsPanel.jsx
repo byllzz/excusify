@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 
-// ── icons ──────────────────────────────────────────────────────────────────
+// icons
 
 const IconSettings = () => (
   <svg
@@ -19,7 +19,7 @@ const IconSettings = () => (
   </svg>
 );
 
-// ── primitives ──────────────────────────────────────────────────────────────
+//  primitives
 
 function SectionLabel({ children, isDark }) {
   return (
@@ -132,7 +132,7 @@ function ThemeToggle({ isDark, onToggle }) {
   );
 }
 
-// ── tab content ────────────────────────────────────────────────────────────
+//  tab content
 
 function SettingsTab({
   settings,
@@ -291,11 +291,11 @@ function SettingsTab({
   );
 }
 
-// ── tab config ─────────────────────────────────────────────────────────────
+//  tab config
 
 const TABS = [{ id: 'settings', label: 'settings', Icon: IconSettings }];
 
-// main panel ─────────────────────────────────────────────────────────────
+// main panel
 
 export default function SettingsPanel({
   open,
@@ -391,7 +391,9 @@ export default function SettingsPanel({
                   setTab(id);
                   try {
                     localStorage.setItem('excusify_settings_tab', id);
-                  } catch {}
+                  } catch {
+                    // no localStorage, ignore
+                  }
                 }}
                 className={`flex items-center gap-1.5 px-3 py-2 text-xs font-mono transition-all cursor-pointer
                   ${tab === id ? tabActive : tabInactive}`}
@@ -416,9 +418,6 @@ export default function SettingsPanel({
               isDark={isDark}
             />
           )}
-          {/* {tab === 'history'   && <HistoryTab   history={history}     onClearHistory={onClearHistory}     isDark={isDark} />}
-          {tab === 'favorites' && <FavoritesTab favorites={favorites}  onClearFavorites={onClearFavorites} isDark={isDark} />}
-          {tab === 'about'     && <AboutTab     isDark={isDark}        totalCount={totalCount} />} */}
         </div>
 
         {/* footer */}
