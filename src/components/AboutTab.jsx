@@ -34,12 +34,11 @@ export default function AboutTab({ isDark, totalCount, onClose }) {
       ${isDark ? 'border-zinc-800 divide-zinc-800 bg-zinc-800/30' : 'border-zinc-200 divide-zinc-100 bg-zinc-50'}`}
         isDark={isDark}
       >
-        <StatRow label="version" value="0.1.0" isDark={isDark} />
+        <StatRow label="version" value="0.0.1" isDark={isDark} />
         <StatRow label="status" value="complete" isDark={isDark} accent="text-emerald-500" />
         <StatRow label="situations" value="6" isDark={isDark} />
         <StatRow label="tones" value="4" isDark={isDark} />
         <StatRow label="excuses" value="72 built-in" isDark={isDark} />
-        <StatRow label="ai-powered" value="Claude API" isDark={isDark} />
         <StatRow label="deployed on" value="Vercel" isDark={isDark} />
         <StatRow label="license" value="MIT" isDark={isDark} />
         <StatRow
@@ -64,12 +63,8 @@ export default function AboutTab({ isDark, totalCount, onClose }) {
       >
         <StatRow label="built by" value="Bilal Malik" isDark={isDark} />
         <StatRow label="github" value="@byllzz" isDark={isDark} accent="text-emerald-500" />
-        <StatRow
-          label="contact"
-          value="bilalmlkdev@gmail.com"
-          isDark={isDark}
-          accent="text-emerald-500"
-        />
+        <StatRow label="email" value="bilalmlkdev@gmail.com" isDark={isDark} accent="text-emerald-500" />
+
       </div>
     </div>
   );

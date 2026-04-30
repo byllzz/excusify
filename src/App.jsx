@@ -145,11 +145,11 @@ export default function App() {
   const currentSituation = customTone ? customTone.situation : displaySit;
   const currentTone = customTone ? customTone.tone : displayTone;
 
-  // ── persist ────────────────────────────────────────────────────────────────
+  //  persist
 
   useEffect(() => {
     if (!settings.localStorage) return;
-    // persist core state (do not persist transient UI like the settings panel open state)
+    // persist core state
     try {
       localStorage.setItem(LS_KEY, JSON.stringify({ activeSit, activeTone, excuse, rated, count }));
     } catch {}
@@ -177,7 +177,7 @@ export default function App() {
     } catch {}
   }, [tabOpen, settings.localStorage]);
 
-  // ── generate ───────────────────────────────────────────────────────────────
+  //  generate
 
   const generate = useCallback(() => {
     const pool = excuses[activeSit][activeTone];
@@ -215,7 +215,7 @@ export default function App() {
     }
   }, [activeSit, activeTone, excuse, settings]);
 
-  // ── keyboard shortcut ──────────────────────────────────────────────────────
+  //  keyboard shortcut
 
   useEffect(() => {
     if (!settings.keyboardShortcut) return;
@@ -276,7 +276,7 @@ export default function App() {
     return () => window.removeEventListener('keydown', kb);
   }, [handleCopy, handleFavorite]);
 
-  // ── handlers ───────────────────────────────────────────────────────────────
+  //  handlers
 
   function handleToggle(key) {
     setSettings(prev => ({
@@ -344,7 +344,7 @@ export default function App() {
 
   const isFavorite = favorites.some(f => f.excuse === excuse);
 
-  // ── theme classes ──────────────────────────────────────────────────────────
+  //  theme classes
 
   const bg = isDark ? 'bg-zinc-950' : 'bg-zinc-100';
   const cardBg = isDark ? 'bg-zinc-900' : 'bg-white';
@@ -367,9 +367,6 @@ export default function App() {
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-3">
             <h1 className={`text-3xl font-mono font-bold tracking-tight ${titleCl}`}>excusify</h1>
-            <span className="text-xs font-mono px-2 py-0.5 rounded-full border border-yellow-500/40 bg-yellow-500/10 text-yellow-400">
-              v0.1-dev
-            </span>
           </div>
 
           <div className="flex items-center gap-2">
@@ -491,7 +488,7 @@ export default function App() {
             {/* keyboard help */}
             <button
               onClick={() => setShowKeyboardHelp(true)}
-              className={`p-2 rounded-lg border transition-all cursor-pointer ${settBtn}`}
+              className={`py-[4px] px-[11.5px] rounded-lg border transition-all cursor-pointer ${settBtn}`}
               title="keyboard help"
             >
               ?

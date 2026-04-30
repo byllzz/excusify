@@ -18,19 +18,19 @@
 
 [![Visit Excusify](https://img.shields.io/badge/View-excusify-9B72FF?style=flat)](https://excusify.vercel.app)
 
-<img width="100%" alt="Excusify Preview" src="./assets/preview.png" />
+<img width="100%" alt="Excusify Preview" src="./src/assets/preview.png" />
 
-⭐ Star it on GitHub if it saved your standup — you know it did.
+⭐ Star it on GitHub if it saved your standup - you know it did.
 
 ---
 
 ## What is Excusify?
 
-Excusify is a dev-focused tool that generates context-aware excuses for common engineering situations — missed deadlines, production outages, unreviewed PRs, failed deploys, and more.
+Excusify is a dev-focused tool that generates context-aware excuses for common engineering situations - missed deadlines, production outages, unreviewed PRs, failed deploys, and more.
 
 Pick your situation, pick your tone, get an excuse. Copy it. Send it. Survive the standup.
 
-Whether you need a polished corporate response for your PM, a chaotic one-liner for your tech lead, or a desperate plea for your team — Excusify has you covered. It also hooks into the Claude API so you can type in any custom situation and get a freshly generated, believable excuse on the spot.
+Whether you need a polished corporate response for your PM, a chaotic one-liner for your tech lead, or a desperate plea for your team - Excusify has you covered. It also hooks into the Claude API so you can type in any custom situation and get a freshly generated, believable excuse on the spot.
 
 ---
 
@@ -38,29 +38,29 @@ Whether you need a polished corporate response for your PM, a chaotic one-liner 
 
 ✔️ **6 built-in situations** - bug still exists, missed deadline, prod went down, PR not reviewed, deploy failed, missed standup<br>
 ✔️ **4 tones** - professional, chaotic, desperate, corporate bs<br>
-✔️ **Excuse of the day** - seed-based daily excuse, same for everyone on the same date
+✔️ **Excuse of the day** - seed-based daily excuse, same for everyone on the same date<br>
 
-Sharing & social
-✔️ **Share as image** - download a tweet-ready PNG card via `html2canvas` (improved templates)
-✔️ **Twitter & LinkedIn** - one-click share actions that open the native share compose
-✔️ **Slack & WhatsApp** - pre-formatted deep links for quick sharing
-✔️ **Copy as Slack block** - paste-ready bold + quoted format
-✔️ **Shareable URL** - unique link per excuse encoded in URL params
+Sharing & social<br>
+✔️ **Share as image** - download a tweet-ready PNG card via `html2canvas` (improved templates)<br>
+✔️ **Twitter & LinkedIn** - one-click share actions that open the native share compose<br>
+✔️ **Slack & WhatsApp** - pre-formatted deep links for quick sharing<br>
+✔️ **Copy as Slack block** - paste-ready bold + quoted format<br>
+✔️ **Shareable URL** - unique link per excuse encoded in URL params<br>
 
-Persistence & discovery
-✔️ **Favorites** - star and save your best excuses, persisted to `localStorage`
-✔️ **Excuse history** - shows the latest 10 by default with a "show all" toggle; history capped to avoid localStorage bloat
-✔️ **All-time counter** - tracks total excuses generated
+Persistence & discovery<br>
+✔️ **Favorites** - star and save your best excuses, persisted to `localStorage`<br>
+✔️ **Excuse history** - shows the latest 10 by default with a "show all" toggle; history capped to avoid localStorage bloat<br>
+✔️ **All-time counter** - tracks total excuses generated<br>
 
-UX, accessibility & productivity
-✔️ **Settings panel** - slide-in drawer; active tab persisted (but transient open state is not)
-✔️ **Dark / Light mode** - full theme toggle, persisted across reloads
-✔️ **localStorage toggle** - opt in or out of data persistence
-✔️ **Auto-copy** - copies excuse to clipboard automatically on generate
-✔️ **Sound effects** - subtle synthesized audio feedback via Web Audio API
-✔️ **Keyboard shortcuts & help overlay** - `Space` generate, `?` show keyboard help, `S`/`T` focus pickers, `C` copy, `F` favorite
+UX, accessibility & productivity<br>
+✔️ **Settings panel** - slide-in drawer; active tab persisted (but transient open state is not)<br>
+✔️ **Dark / Light mode** - full theme toggle, persisted across reloads<br>
+✔️ **localStorage toggle** - opt in or out of data persistence<br>
+✔️ **Auto-copy** - copies excuse to clipboard automatically on generate<br>
+✔️ **Sound effects** - subtle synthesized audio feedback via Web Audio API<br>
+✔️ **Keyboard shortcuts & help overlay** - `Space` generate, `?` show keyboard help, `S`/`T` focus pickers, `C` copy, `F` favorite<br>
 
-Developer & repo
+Developer & repo<br>
 ✔️ **Repo tab** - view GitHub metadata, open issues, and top contributors inside the app; `RepoTab` reads `package.json` (`repository.url`) or a custom `excusify.repo` field
 
 
@@ -176,26 +176,16 @@ git push origin feat/your-feature
 **Ways to contribute:**
 
 - Add new situations to `src/data/situations.js` and `src/data/excuses.js`
-- Add new tones — follow the existing pattern in `tones.js` and `excuses.js`
+- Add new tones - follow the existing pattern in `tones.js` and `excuses.js`
  - Improve custom templates for generated excuses
-- Fix bugs — open an issue first so we can discuss
-- Improve accessibility — ARIA labels, focus management, keyboard nav
-- Translate excuses — open a PR with a new locale file
+- Fix bugs - open an issue first so we can discuss
+- Improve accessibility - ARIA labels, focus management, keyboard nav
+- Translate excuses - open a PR with a new locale file
 
-**Please keep PRs focused** — one feature or fix per PR. If you're unsure whether something fits, open an issue first.
-
----
-
-## Roadmap
-
-- [ ] PWA support — install on desktop and mobile
-- [ ] Excuse collections — save and name sets of excuses
-- [ ] More languages / locales
-- [ ] Confetti on "believable" rating
-- [ ] Typewriter animation on excuse reveal
-- [ ] Browser extension — generate an excuse from any page
+**Please keep PRs focused** - one feature or fix per PR. If you're unsure whether something fits, open an issue first.
 
 ---
+
 
 # License 📄
 
